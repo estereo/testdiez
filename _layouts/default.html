@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{ page.title }}</title>
+        <meta name="viewport" content="width=device-width">
+		<link href="http://fonts.googleapis.com/css?family=News+Cycle:400,700"" rel="stylesheet" type="text/css"">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+		<style type="text/css">
+		body {font-family: 'News Cycle', sans-serif;}
+		a:link {text-decoration: none;}
+		section {overflow: hidden;}
+		h1 {margin-bottom: 50px;}
+		.recipient {
+			height: 500px;
+			border: 1px #58D3F7 solid;
+			width: 250px;
+			float: left;
+			margin-right:40px;
+		}
+		.liquid {
+			background-color: #A9E2F3;
+			width: 100%;
+			height: 100%;
+		}
+		
+		footer {text-align:center; padding: 20px 0;}
+		@media only screen and (min-width: 940px) { header, section {margin: 0 auto; width: 940px;} }
+		@media only screen and (max-width: 940px) { header, section {margin: 0 10%;} }
+		</style>
+    </head>
+    <body>
+
+        <div class="site container">
+          <div class="header">
+            <h1 class="title">{{ site.name }}</h1>
+          </div>
+
+          {{ content }}
+
+          <footer>
+            <div class="contact">
+             <p>Just learning &amp; testing | <a href="mailto:hola@estheramor.es" title="Write me">hola@estheramor.es</a></p>
+            </div>
+          </footer>
+        </div>
+		
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+		$( "button.empty" ).click(function(){
+		    $( "div.liquid" ).css(height:0%);
+		});
+		$( "button.little" ).click(function(){
+		    $( "div.liquid" ).css(height:25%);
+		});
+		$( "button.half" ).click(function(){
+		    $( "div.liquid" ).css(height:50%);
+		});
+		$( "button.almost" ).click(function(){
+		    $( "div.liquid" ).css(height:75%);
+		});
+		$( "button.full" ).click(function(){
+		    $( "div.liquid" ).css(height:100%);
+		});
+		</script>
+    </body>
+</html>
