@@ -56,6 +56,16 @@
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 		<script type="text/javascript">
+		var counter = 0;
+
+		$("button").click(function(){
+		    if ( counter > 8 ) { // If counter is bigger than 8
+		        alert("Too many times");
+		    } else {
+		         counter = counter + 1 ;   
+		    }
+		});
+		
 		$( "button.empty" ).click(function(){
 		    $( "div.liquid" ).css("height", "0%");
 		});
